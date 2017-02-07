@@ -1,0 +1,22 @@
+---
+primary_name: "{{ hostvars[groups['postgresql'][0]].name }}"
+primary_address: "{{ hostvars[groups['postgresql'][0]].ipv4_address_private }}"
+secondary_name: "{{ hostvars[groups['postgresql'][1]].name }}"
+secondary_address: "{{ hostvars[groups['postgresql'][1]].ipv4_address_private }}"
+
+
+postgresql_streaming_user:
+  name: replica
+  pass: replica1234
+postgresql_streaming_master: "{{ primary_address }}"
+postgresql_streaming_slaves:
+ - "{{ secondary_address }}"
+
+postgresql_admin_user: "postgres"
+
+postgresql_default_unix_auth_method: "trust"
+postgresql_default_ipv4_auth_method: "md5"
+postgresql_default_ipv6_auth_method: "md5"
+
+
+

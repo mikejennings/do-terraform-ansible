@@ -1,2 +1,2 @@
-# do-terraform-ansible
-digitalocean scripts for terraform and ansible
+# ha-postgresql-terraform
+HA postgresql setup with replication. 
