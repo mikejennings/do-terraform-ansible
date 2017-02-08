@@ -19,8 +19,8 @@
     dest: /etc/keepalived/master.sh
     mode: 0755
 
-- name: start keepalived
+- name: restart keepalived
   service: 
     name: keepalived
-    state: started
+    state: restarted
     enabled: yes

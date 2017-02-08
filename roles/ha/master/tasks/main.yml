@@ -3,3 +3,9 @@
     src: 'keepalived.conf'
     dest: /etc/keepalived/keepalived.conf
     mode: 0644
+
+- name: restart keepalived
+  service: 
+    name: keepalived
+    state: restarted
+    enabled: yes
