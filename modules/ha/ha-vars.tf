@@ -1,4 +1,4 @@
-# Variable declaration for load balancers
+# Variable declaration for HA servers
 variable "ha_size" {
   type    = "string"
   default = "4gb"

@@ -1,2 +1,2 @@
 # ha-postgresql-terraform
-HA postgresql setup with replication. 
+Simple keepalived setup for 2 servers on digitalocean. 
