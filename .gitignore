@@ -1,0 +1,11 @@
+.DS_Store
+site.retry
+*.tfstate.*
+*.tfstate
+*.tfvars
+*.pyc
+.terraform/
+group_vars/all/keys.yml
+storage/*
+.key.txt
+.idea/*

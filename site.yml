@@ -3,7 +3,15 @@
   gather_facts: yes
   become: True
 
-- hosts: ha
+- hosts: ha[0]
   roles:
    - ha
+   - ha/master
+  become: True
+
+- hosts: ha:!ha[0]
+  roles:
+    - ha
+    - ha/slave
+  become: True
 

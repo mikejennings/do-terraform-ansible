@@ -8,28 +8,28 @@
     - keepalived
     - heartbeat
 
-- name: configure keepalived
-  template:
-    src: keepalived.conf
-    dest: /etc/keepalived/keepalived.conf
-    mode: 0644
+  #- name: configure keepalived
+  #  template:
+  #  src: keepalived.conf
+  #  dest: /etc/keepalived/keepalived.conf
+  #  mode: 0644
 
-- name: configure heartbeat
-  template:
-    src: ha.cf
-    dest: /etc/ha.d/ha.cf
-    mode: 0644
+#- name: configure heartbeat
+#  template:
+#    src: ha.cf
+#    dest: /etc/ha.d/ha.cf
+#    mode: 0644
 
-- name: configura haresources
-  template:
-    src: haresources
-    dest: /etc/ha.d/haresources
+#- name: configura haresources
+#  template:
+#    src: haresources
+#    dest: /etc/ha.d/haresources
 
-- name: configure authkey
-  template:
-    src: authkeys
-    dest: /etc/ha.d/authkeys
-    mode: 0600
+#- name: configure authkey
+#  template:
+#    src: authkeys
+#    dest: /etc/ha.d/authkeys
+#    mode: 0600
 
 - name: install floating ip assigner
   template:
@@ -37,11 +37,11 @@
     dest: /usr/local/bin/assign-ip
     mode: 0755
 
-- name: install floating ip manager
-  template:
-    src: floatip
-    dest: /etc/init.d/floatip
-    mode: 0755
+#- name: install floating ip manager
+#  template:
+#    src: floatip
+#    dest: /etc/init.d/floatip
+#    mode: 0755
 
 - name: install keepalived script
   template:
@@ -55,8 +55,8 @@
     state: started
     enabled: yes
 
-- name: start heartbeat service
-  service:
-    name: heartbeat
-    state: started
-    enabled: yes
+#- name: start heartbeat service
+#  service:
+#    name: heartbeat
+#    state: started
+#    enabled: yes

@@ -16,3 +16,5 @@ variable "private_key_path" {}
 variable "ssh_fingerprint" {}
 
 variable "public_key" {}
+
+variable "auth_passwd" {}

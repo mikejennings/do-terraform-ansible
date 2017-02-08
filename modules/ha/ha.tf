@@ -1,7 +1,7 @@
 resource "digitalocean_droplet" "ha" {
   count              = 2
   image              = "${var.image_slug}"
-  name               = "${var.project}-db-${count.index + 1}"
+  name               = "${var.project}-ha-${count.index + 1}"
   region             = "${var.region}"
   size               = "${var.ha_size}"
   private_networking = true

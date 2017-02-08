@@ -1,1 +1,1 @@
-{{ hostvars[groups['ha'][0]].name }} floatip
+{{ primary_name }} floatip

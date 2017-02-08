@@ -1,6 +1,11 @@
 ---
 floating_ip: "{{ hostvars[groups['ha_fip'][0]]['ip_address'] }}"
+
+
 primary_name: "{{ hostvars[groups['ha'][0]].name }}"
-primary_address: "{{ hostvars[groups['ha'][0]].ipv4_address_private }}"
+public_primary_address: "{{ hostvars[groups['ha'][0]].ipv4_address }}"
+private_primary_address: "{{ hostvars[groups['ha'][0]].ipv4_address_private }}"
+
 secondary_name: "{{ hostvars[groups['ha'][1]].name }}"
-secondary_address: "{{ hostvars[groups['ha'][1]].ipv4_address_private }}"
+public_secondary_address: "{{ hostvars[groups['ha'][1]].ipv4_address }}"
+private_secondary_address: "{{ hostvars[groups['ha'][1]].ipv4_address_private }}"

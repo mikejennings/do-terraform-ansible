@@ -6,14 +6,14 @@ vrrp_script chk_postgres {
 
 vrrp_instance VI_1 {
     interface eth1
-    state MASTER
-    priority 101
+    state BACKUP
+    priority 100
     nopreempt
 
     virtual_router_id 33
-    unicast_src_ip '{{ private_primary_address }}'
+    unicast_src_ip '{{ private_secondary_address }}''
     unicast_peer {
-       '{{ private_secondary_address }}'
+       '{{ private_primary_address }}'
     }
 
     authentication {

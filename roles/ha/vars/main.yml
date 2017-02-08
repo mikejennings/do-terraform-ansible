@@ -4,4 +4,5 @@ DO_TOKEN:
 # Generated ha auth key. Consult README.md for how to generate.
 ha_auth_key: 
 
+auth_passwd: blah
 
